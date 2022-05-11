@@ -1,0 +1,60 @@
+TestNG:
+is a testing tool that helps us to structure our test cases using different annotations
+
+Benefits of testNG:
+1.Reports
+2.Annotations  e.g @Test, @before ,@beforeclass
+3.parallel testing
+4.batch execution
+5.Assertions--> Hard Assertions , SoftAssertions
+6.Data Parameterization
+
+it can be integrated with cucumber , maven and selenium.
+
+
+
+1.Annotations:
+we donot need any main method
+
+annotation is a tag that provides additional inforamtion about class, interface or method in testNG
+anotation are used to keep the strucutre of test cases
+
+@Test
+@BeforeMethod
+@AfterMethod
+@BeforeClass
+@AfterClass
+
+
+1.@Test
+You should write your test cases under this annotation.
+This is the main annotation in testNG
+By default testNG excutes the methods in alphabetical order.
+
+
+2.@BeforeMethod:
+runs every time before the @test is executed
+also called precondition
+
+3.@AfterMethod:
+runs after each @test Method
+also called post condition
+
+
+before method is preconditon that must run before every test case and the post conditon will run after
+the test case has ended
+
+priority:
+by deafault the priority is zero of all the test case
+in order to give them a priority order
+use @Test(priority =1)
+
+
+Enabled:
+@Test(enabled=false)--> will not run the test cases that are set false
+by deafult all test cases are set to enabled=true
+
+DependsOn:
+
+@Test(dependsOnMethods = "methodName")
+will only run if the depndent method has passed successfully else it will be skipped
